@@ -2,7 +2,7 @@
 I refactor this project based on TEditor(https://github.com/XAM-Consulting/TEditor), removed UIWebView, and using WKWebView instead. Refactor project to netstandard lib.
 TEditor is a HTML editor for Xamarin, it has so many build-in features and easy to use.
 
- [![NuGet](https://img.shields.io/nuget/v/TEditor.svg?label=NuGet)](https://www.nuget.org/packages/TEditor) 
+ [![NuGet](https://img.shields.io/nuget/v/TEditor.svg?label=NuGet)](https://www.nuget.org/packages/TEditor2) 
  
 ### Demo
 ![iOSDemo](https://github.com/XAM-Consulting/TEditor/blob/master/Images/iOS.gif) ![DroidDemo](https://github.com/XAM-Consulting/TEditor/blob/master/Images/Droid.gif)
