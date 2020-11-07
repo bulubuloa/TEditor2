@@ -8,7 +8,7 @@ TEditor is a HTML editor for Xamarin, it has so many build-in features and easy 
 ![iOSDemo](https://github.com/XAM-Consulting/TEditor/blob/master/Images/iOS.gif) ![DroidDemo](https://github.com/XAM-Consulting/TEditor/blob/master/Images/Droid.gif)
 
 ### Usage
-Available on Nuget:[https://www.nuget.org/packages/TEditor2/](https://www.nuget.org/packages/TEditor/)
+Available on Nuget:[https://www.nuget.org/packages/TEditor2/](https://www.nuget.org/packages/TEditor2/)
 
 Call single line from any project or PCL, make sure it must be in UIThread.
 
