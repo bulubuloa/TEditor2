@@ -28,25 +28,25 @@ namespace TEditor
             var nav = FindNavigationController(UIApplication.SharedApplication.KeyWindow.RootViewController);
 
             // done button
-            var doneIcon = UIImage.FromFile("Images/fa-check@2x.png");
-            var doneButton = new UIBarButtonItem(doneIcon, UIBarButtonItemStyle.Done, async (item, args) =>
+            //var doneIcon = UIImage.FromFile("Images/fa-check@2x.png");
+            var doneButton = new UIBarButtonItem(CrossTEditor.SaveText, UIBarButtonItemStyle.Done, async (item, args) => //Switch to Text Button
+            {
+                nav?.PopViewController(true);
+                taskRes.SetResult(new TEditorResponse
                 {
-                    nav?.PopViewController(true);
-                    taskRes.SetResult(new TEditorResponse
-                    {
-                        IsSave = false,
-                        HTML = await tvc.GetHTML()
-                    });
+                    IsSave = true, //Chnaged from false to true.
+                    HTML = await tvc.GetHTML()
                 });
+            });
 
             // navigation to editor html view
             tvc.NavigationItem.SetRightBarButtonItem(doneButton, true);
             nav?.PushViewController(tvc, true);
-			nav.NavigationBar.Hidden = false;
-			nav.NavigationBarHidden = false;
+            nav.NavigationBar.Hidden = false;
+            nav.NavigationBarHidden = false;
 
-			// set result 
-			return taskRes.Task;
+            // set result 
+            return taskRes.Task;
         }
 
         private static UINavigationController FindNavigationController(UIViewController parrent)
