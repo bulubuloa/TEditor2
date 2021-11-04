@@ -29,12 +29,12 @@ namespace TEditor
 
             // done button
             //var doneIcon = UIImage.FromFile("Images/fa-check@2x.png");
-            var doneButton = new UIBarButtonItem(CrossTEditor.SaveText, UIBarButtonItemStyle.Done, async (item, args) => //Switch to Text Button
+            var doneButton = new UIBarButtonItem(UIBarButtonSystemItem.Done, async (item, args) =>
             {
                 nav?.PopViewController(true);
                 taskRes.SetResult(new TEditorResponse
                 {
-                    IsSave = true, //Chnaged from false to true.
+                    IsSave = true,
                     HTML = await tvc.GetHTML()
                 });
             });
